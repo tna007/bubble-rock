@@ -2,6 +2,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Screenshots
 
-![Front Page](/public/assets/img/redux/front.png "Landing Page")
-![Cart](/public/assets/img/redux/cart.png "Add To Cart")
-![Checkout](/public/assets/img/redux/checkout.png "Checkout")
+![Front Page](/public/assets/redux/front.png "Landing Page")
+![Cart](/public/assets/redux/cart.png "Add To Cart")
+![Checkout](/public/assets/redux/checkout.png "Checkout")
