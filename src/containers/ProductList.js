@@ -3,26 +3,49 @@ import { useDispatch, useSelector } from "react-redux";
 
 import Product from "../components/Product";
 import { fetchProducts } from "../actions/actions";
+import { Col, Container, Row, Button, Spinner } from "react-bootstrap";
 
 const ProductList = () => {
   const dispatch = useDispatch();
   const { products, loading, hasErrors } = useSelector(
     (initialState) => initialState.products
   );
+
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
-
+  console.log(products);
   const list = products.map((product) => (
     <Product key={product.id} product={product} />
   ));
 
   return (
     <section>
-      <h1>Products</h1>
-      {loading && <p>Loading products...</p>}
-      {hasErrors && <p>Error! 404 Page not found</p>}
-      {list}
+      <Container>
+        <Row>
+          <Col className="mt-5 text-center">
+            <h1 className="mt-5">Products</h1>
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        {loading && (
+          <Button variant="primary" disabled>
+            <Spinner
+              as="span"
+              animation="grow"
+              size="sm"
+              role="status"
+              aria-hidden="true"
+            />
+            Loading...
+          </Button>
+        )}
+        {hasErrors && <p>Error! 404 Page not found</p>}
+      </Container>
+      <Container>
+        <Row className="justify-content-around">{list}</Row>
+      </Container>
     </section>
   );
 };

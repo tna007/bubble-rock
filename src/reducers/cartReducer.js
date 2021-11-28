@@ -17,6 +17,7 @@ const cartReducer = (state = [], action) => {
         return state.concat({
           name: action.name,
           quantity: 1,
+          img: action.img,
           price: action.price,
           totalPrice: action.totalPrice,
         });
