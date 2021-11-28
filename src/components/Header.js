@@ -1,12 +1,12 @@
 import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import AddToCart from "./AddToCart";
-import Cart from "./Cart";
+// import Cart from "./Cart";
 import Login from "./Login";
 
-const NavBar = () => {
+const Header = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" fixed="top">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -17,7 +17,7 @@ const NavBar = () => {
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
           <Navbar.Brand href="/" className="mx-auto">
-            Logo
+            Bubble Rock
           </Navbar.Brand>
           <Login />
           <AddToCart />
@@ -27,4 +27,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Header;
