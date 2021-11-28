@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
@@ -10,7 +10,7 @@ const ProdDetails = () => {
   const dispatch = useDispatch();
   const prodId = useParams();
   useEffect(() => {
-    dispatch(fetchProducts(prodId.id));
+    dispatch(fetchProducts());
   }, [dispatch]);
 
   const { products } = useSelector(({ products }) => products);
@@ -18,12 +18,6 @@ const ProdDetails = () => {
   const prodDetail = products.filter((product) => product.id === prodId.id);
   const product = prodDetail[0];
 
-  //   function remove() {
-  //     dispatch({
-  //       type: actions.REMOVE_PRODUCT,
-  //       name: product.name,
-  //     });
-  //   }
   const addProd = (item) => {
     dispatch(add(item));
   };

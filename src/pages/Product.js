@@ -13,13 +13,6 @@ function Product({ product }) {
     dispatch(decrease(item));
   };
 
-  // function remove() {
-  //   dispatch({
-  //     type: actions.REMOVE_PRODUCT,
-  //     name: product.name,
-  //   });
-  // }
-
   return (
     <Card className="my-5 py-3" style={{ width: "20rem" }}>
       <Card.Img variant="top" src={product.img} />
@@ -37,9 +30,6 @@ function Product({ product }) {
         <Button className="ms-2" onClick={() => decreaseItem(product)}>
           -
         </Button>
-        {/* <Button onClick={() => remove()}>
-          <span>x</span>
-        </Button> */}
       </Card.Body>
     </Card>
   );

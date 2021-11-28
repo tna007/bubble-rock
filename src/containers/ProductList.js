@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import Product from "../components/Product";
+import Product from "../pages/Product";
 import { fetchProducts } from "../actions/actions";
 import { Col, Container, Row, Button, Spinner } from "react-bootstrap";
 
@@ -14,7 +14,7 @@ const ProductList = () => {
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
-  console.log(products);
+
   const list = products.map((product) => (
     <Product key={product.id} product={product} />
   ));

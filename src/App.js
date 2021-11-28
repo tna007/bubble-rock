@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import About from "./components/About";
+import About from "./pages/About";
 import Cart from "./components/Cart";
-import Checkout from "./components/Checkout";
-import Contact from "./components/Contact";
-import Home from "./components/Home";
+import Checkout from "./pages/Checkout";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
 import Header from "./components/Header";
 import ProductList from "./containers/ProductList";
 import ProdDetails from "./components/ProdDetails";
