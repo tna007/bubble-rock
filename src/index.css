@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* NavBar */
+.navbar-nav li a {
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  letter-spacing: 3px;
+}
+
+.carousel-item {
+  height: 100vh;
+}
+.carousel-item {
+  object-fit: fill;
+}
+
+/* Card */
+.card,
+.product img {
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product img:hover {
+  transform: scale(1.1);
+}
