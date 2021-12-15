@@ -1,19 +1,20 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import products from "../db";
+// import { useDispatch, useSelector } from "react-redux";
+// import { fetchProducts } from "../actions/actions";
 
 import Product from "../pages/Product";
-import { fetchProducts } from "../actions/actions";
-import { Col, Container, Row, Button, Spinner } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 const ProductList = () => {
-  const dispatch = useDispatch();
-  const { products, loading, hasErrors } = useSelector(
-    (initialState) => initialState.products
-  );
+  // const dispatch = useDispatch();
+  // const { products, loading, hasErrors } = useSelector(
+  //   (initialState) => initialState.products
+  // );
 
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchProducts());
+  // }, [dispatch]);
 
   const list = products.map((product) => (
     <Product key={product.id} product={product} />
@@ -28,7 +29,7 @@ const ProductList = () => {
           </Col>
         </Row>
       </Container>
-      <Container>
+      {/* <Container>
         {loading && (
           <Button variant="primary" disabled>
             <Spinner
@@ -42,7 +43,7 @@ const ProductList = () => {
           </Button>
         )}
         {hasErrors && <p>Error! 404 Page not found</p>}
-      </Container>
+      </Container> */}
       <Container>
         <Row className="justify-content-around">{list}</Row>
       </Container>

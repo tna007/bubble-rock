@@ -30,6 +30,11 @@ const About = () => {
             fairy tales la gear, alta vista choker necklace I believe I can fly
             lion king denzel washington chronic.
           </p>
+          <Button variant="outline-primary my-5 px-3 me-5">
+            <a href="https://github.com/tna007/bubble-rock" noreferrer>
+              Github
+            </a>
+          </Button>
           <Button variant="outline-primary my-5 px-3">
             <NavLink to="/contact">Contact Me</NavLink>
           </Button>
