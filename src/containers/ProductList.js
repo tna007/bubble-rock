@@ -9,7 +9,7 @@ const ProductList = () => {
   ));
 
   return (
-    <section>
+    <>
       <Container>
         <Row>
           <Col className="mt-5 text-center">
@@ -21,7 +21,7 @@ const ProductList = () => {
       <Container>
         <Row className="justify-content-around">{list}</Row>
       </Container>
-    </section>
+    </>
   );
 };
 

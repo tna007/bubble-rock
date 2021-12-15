@@ -27,9 +27,16 @@ const ProdDetails = () => {
             <Image src={product.img} alt={product.name} height="500px"></Image>
           </Col>
           <Col className="xs-6 md-4 my-5 d-flex flex-column ">
-            <h1>{product.name}</h1>
-            <h2>{product.price}</h2>
-
+            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
+              {product.name}
+            </h1>
+            <h2 className="text-sm title-font text-gray-500 tracking-widest">
+              {product.intro}
+            </h2>
+            <h4 className="title-font font-medium text-2xl text-gray-900">
+              {product.price}
+            </h4>
+            <p className="leading-relaxed">{product.desc}</p>
             <Col className="xs-6 md-4 my-5">
               <Button className="my-5 ms-5" onClick={() => addProd(product)}>
                 Add To Cart
