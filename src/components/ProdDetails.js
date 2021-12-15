@@ -1,19 +1,13 @@
 import React from "react";
 import { useParams } from "react-router";
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts, add, decrease } from "../actions/actions";
-
+import { useDispatch } from "react-redux";
+import { add, decrease } from "../actions/actions";
+import products from "../db";
 import { Col, Container, Row, Image, Button } from "react-bootstrap";
 
 const ProdDetails = () => {
   const dispatch = useDispatch();
   const prodId = useParams();
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
-
-  const { products } = useSelector(({ products }) => products);
 
   const prodDetail = products.filter((product) => product.id === prodId.id);
   const product = prodDetail[0];
